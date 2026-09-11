@@ -159,23 +159,23 @@ An interactive Tableau Public dashboard presents the results for exploration.
 
 ### Views
 
-**Leaderboard with Confidence Intervals**
+**Leaderboard with Confidence Intervals** 
 
 The 30 reported safeties ranked by Range Over Expected, each with a 95% bootstrap interval, colored by whether they are statistically distinguishable from average.
 
 ![Leaderboard of the 30 reported safeties by Range Over Expected, with 95% bootstrap confidence intervals](docs/images/leaderboard.png)
 
-**Coverage Role Mix**
+**Coverage Role Mix** 
 Each safety's split of single-high / split-deep / box snaps, showing that "safety" is several different jobs under one label and that range must be measured relative to role.
 
 ![Coverage role mix per safety: share of single-high, split-deep, and box snaps](docs/images/role_mix.png)
 
-**Reliability Stabilization Curve**
+**Reliability Stabilization Curve** 
 How the metric's reliability rises with the number of opportunities per safety — the empirical justification for the study's opportunity threshold.
 
 ![Reliability stabilization curve: split-half reliability rising with opportunities per safety](docs/images/stabilization_curve.png)
 
-**Field Trajectory View**
+**Field Trajectory View** 
 Safety closing paths on the field from throw to arrival, with the ball landing point, illustrating high- vs low-ROE plays using the raw tracking data.
 
 _[Work in Progress]_
