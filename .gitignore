@@ -1,0 +1,46 @@
+# --- Raw data (not redistributable, ~824MB; download from Kaggle) ---
+data/raw/
+
+# --- Virtual environments ---
+path/to/venv/
+venv/
+.venv/
+env/
+ENV/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Testing / coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Editors ---
+.vscode/
+.idea/
+*.swp
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
