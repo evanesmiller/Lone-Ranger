@@ -1,11 +1,11 @@
 # Lone Ranger
 ### Quantifying Safety Range with NFL Player Tracking Data
 
-Lone Ranger is an analytics project that asks a simple question about NFL safeties and answers it carefully: **can we measure a safety's "range" (their ability to cover ground and close in on the football) as a real, repeatable skill, separate from the situations they happen to be put in?**
+Lone Ranger is an analytics project that asks a simple question about NFL safeties and answers it carefully: can we measure a safety's "range" (their ability to cover ground and close in on the football) as a real, repeatable skill, separate from the situations they happen to be put in?
 
 It is built on the 2026 NFL Big Data Bowl player-tracking dataset (2023 season). The headline metric is **Range Over Expected (ROE)**: how many yards a safety closes toward the ball's landing point, above or below what an average deep safety would close from the same situation.
 
-> **Note on scope:** This project was *not* submitted to the Big Data Bowl competition (it had already closed). It was built to the competition's judging standards as a portfolio piece, with a deliberate emphasis on doing the statistics honestly rather than producing an impressive-looking leaderboard.
+> **Note on scope:** This project was *not* submitted to the Big Data Bowl competition (it had already closed prior to project launch). It was built to the competition's judging standards as a portfolio piece, with a deliberate emphasis on doing the statistics honestly rather than producing an impressive-looking leaderboard.
 
 ---
 
@@ -32,12 +32,12 @@ Summary: **Safety range is a real, moderately reliable skill that this single se
 
 These are stated plainly because the credibility of the finding depends on being honest about them. Several are structural to the dataset and would constrain *any* safety-range project built on it.
 
-- **Partial post-throw tracking.** The Big Data Bowl release only provides post-throw trajectories for players flagged `player_to_predict` — a small subset of the defense. Deep safeties are often far from the ball and frequently aren't in that subset, so **~75% of deep-coverage snaps have no usable trajectory.** This is the single biggest constraint and it caps how much data any safety accumulates.
-- **Small study population.** After requiring enough measurable opportunities (≥50 eligible snaps), the study population is **30 safeties**. That is enough for a focused study with confidence intervals, but not a league-wide leaderboard. Individual estimates carry wide uncertainty.
-- **Single season.** Only 2023 is in scope, so all repeatability claims are *within-season* (split-half, first/second-half). This project makes **no claim about year-over-year stability**, which would require multiple seasons.
-- **Coverage role is inferred, not labeled.** The data does not state each safety's individual assignment. A pre-snap classifier infers a coarse role (single-high / split-deep / box) from alignment; it agrees with the stated coverage shell ~67% of the time, and the disagreements (disguise, rotation) are a known source of noise.
-- **"Range" is a joint skill.** Range blends reading the play early and closing once the ball is up. An attempt to numerically separate "anticipation" from "closing athleticism" was investigated and **deliberately dropped** since the available signal (velocity at the throw) was too mechanically entangled with the outcome to separate cleanly at this sample size. Range is therefore reported as a single joint measure, with any "reader-vs-athlete" lean discussed qualitatively rather than as a contested number.
-- **The leaderboard is not a precise ranking.** Adjacent safeties' confidence intervals overlap heavily. Only top-vs-field distinctions are statistically supported.
+- **Partial post-throw tracking:** The Big Data Bowl release only provides post-throw trajectories for players flagged `player_to_predict` — a small subset of the defense. Deep safeties are often far from the ball and frequently aren't in that subset, so **~75% of deep-coverage snaps have no usable trajectory:** This is the single biggest constraint and it caps how much data any safety accumulates.
+- **Small study population:** After requiring enough measurable opportunities (≥50 eligible snaps), the study population is **30 safeties**. That is enough for a focused study with confidence intervals, but not a league-wide leaderboard. Individual estimates carry wide uncertainty.
+- **Single season:** Only 2023 is in scope, so all repeatability claims are *within-season* (split-half, first/second-half). This project makes **no claim about year-over-year stability**, which would require multiple seasons.
+- **Coverage role is inferred, not labeled:** The data does not state each safety's individual assignment. A pre-snap classifier infers a coarse role (single-high / split-deep / box) from alignment; it agrees with the stated coverage shell ~67% of the time, and the disagreements (disguise, rotation) are a known source of noise.
+- **"Range" is a joint skill:** Range blends reading the play early and closing once the ball is up. An attempt to numerically separate "anticipation" from "closing athleticism" was investigated and **deliberately dropped** since the available signal (velocity at the throw) was too mechanically entangled with the outcome to separate cleanly at this sample size. Range is therefore reported as a single joint measure, with any "reader-vs-athlete" lean discussed qualitatively rather than as a contested number.
+- **The leaderboard is not a precise ranking:** Adjacent safeties' confidence intervals overlap heavily. Only top-vs-field distinctions are statistically supported.
 
 ---
 
